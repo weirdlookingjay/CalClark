@@ -1,17 +1,28 @@
 /** @type {import('next').NextConfig} */
+
+const hostnames = [
+  "*.googleusercontent.com",
+  "*.githubusercontent.com",
+  "*.utfs.io",
+];
+
 const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: "https",
         hostname: "*.googleusercontent.com",
-        port: "",
         pathname: "**",
       },
       {
         protocol: "https",
-        hostname: "*.githubusercontent.com",
-        port: "",
+        hostname: "githubusercontent.com",
+        pathname: "**",
+      },
+
+      {
+        protocol: "https",
+        hostname: "utfs.io",
         pathname: "**",
       },
     ],
